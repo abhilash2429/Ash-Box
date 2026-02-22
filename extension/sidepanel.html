@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ash Box</title>
+  <link rel="stylesheet" href="sidepanel.css" />
+</head>
+<body>
+  <div id="app" data-theme="dark">
+    <header id="topbar">
+      <div class="brand">
+        <span class="brand-dot"></span>
+        <div>
+          <h1>Ash Box</h1>
+          <p>Side panel runner</p>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="theme-toggle" class="ghost-btn" type="button" aria-label="Toggle theme">Light</button>
+        <button id="console-toggle" class="ghost-btn" type="button" aria-label="Toggle console">Console</button>
+      </div>
+    </header>
+
+    <section id="status-row">
+      <div id="docker-status">
+        <span id="docker-indicator" class="indicator unknown"></span>
+        <span id="docker-label">Checking runtime...</span>
+      </div>
+      <p id="lang-notice"></p>
+    </section>
+
+    <section id="lang-bar">
+      <div id="lang-tabs"></div>
+    </section>
+
+    <main id="editor-panel">
+      <label for="code-input" class="panel-label">Code</label>
+      <textarea id="code-input" spellcheck="false"></textarea>
+    </main>
+
+    <footer id="controls">
+      <div id="dep-row">
+        <label id="dep-label" for="dep-input">Packages</label>
+        <input id="dep-input" type="text" spellcheck="false" autocomplete="off" />
+      </div>
+      <button id="run-btn" type="button" disabled>Run</button>
+    </footer>
+
+    <section id="console-drawer" class="hidden">
+      <div id="console-header">
+        <span>Output Console</span>
+        <button id="clear-btn" type="button">Clear</button>
+      </div>
+      <div id="console-output"></div>
+    </section>
+  </div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
