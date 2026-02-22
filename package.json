@@ -1,18 +1,26 @@
 {
-  "name": "executor",
+  "name": "ash-box",
   "version": "1.0.0",
   "description": "Ephemeral local code execution tool",
-  "main": "main.js",
+  "main": "desktop/main.js",
   "scripts": {
     "start": "electron .",
-    "build-image": "node build-image.js"
+    "bridge": "node runtime/bridge-server.js",
+    "build-image": "node runtime/build-image.js",
+    "create-icons": "node scripts/create-icons.js"
   },
-  "keywords": ["electron", "docker", "code-runner"],
+  "keywords": [
+    "electron",
+    "docker",
+    "code-runner",
+    "chrome-extension"
+  ],
   "license": "MIT",
   "dependencies": {
     "dockerode": "^4.0.0"
   },
   "devDependencies": {
-    "electron": "^28.0.0"
+    "electron": "^28.0.0",
+    "pngjs": "^7.0.0"
   }
 }
